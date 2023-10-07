@@ -349,4 +349,57 @@ const items = [
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
+.vertical-animation {
+  animation-name: vertical-move;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.flip-animation {
+  animation-name: flip;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes vertical-move {
+  0% {
+    transform: translateY(5px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(5px);
+  }
+}
+
+@keyframes flip {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
 </style>
