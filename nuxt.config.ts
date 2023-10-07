@@ -2,9 +2,6 @@ import { defineNuxtConfig } from "nuxt/config";
 import vuetify from "vite-plugin-vuetify";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  app: {
-    baseURL: "/reiPortfolio/",
-  },
   typescript: {
     shim: false,
     strict: true,
