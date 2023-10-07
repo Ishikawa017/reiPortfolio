@@ -5,6 +5,7 @@ export default defineNuxtConfig({
   target: "static",
   app: {
     baseURL: "/reiPortfolio/",
+    cdnURL: "/reiPortfolio/",
   },
   typescript: {
     shim: false,
