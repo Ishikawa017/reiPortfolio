@@ -1,14 +1,6 @@
 <template>
   <v-app>
     <v-app-bar density="default" class="bg-transparent" flat>
-      <v-app-bar-title>
-        <v-img height="68" width="250" src="./iamges/logo/logo.png"> </v-img>
-      </v-app-bar-title>
-      <div v-if="$vuetify.display.mdAndUp">
-        <v-btn href="#profile" size="large"> Profile </v-btn>
-        <v-btn href="#skills" size="large"> Skills </v-btn>
-        <v-btn href="#gallery" size="large"> Gallery </v-btn>
-      </div>
       <v-btn @click.stop="navActive = !navActive" size="large">
         <div class="hamburger-menu" v-bind:class="{ active: navActive }">
           <span></span>
@@ -16,6 +8,11 @@
           <span></span>
         </div>
       </v-btn>
+      <div v-if="$vuetify.display.mdAndUp">
+        <v-btn href="#profile" size="large"> Profile </v-btn>
+        <v-btn href="#skills" size="large"> Skills </v-btn>
+        <v-btn href="#gallery" size="large"> Gallery </v-btn>
+      </div>
     </v-app-bar>
 
     <v-navigation-drawer
@@ -29,11 +26,6 @@
       disable-resize-watcher
     >
       <v-container class="position-relative">
-        <v-img
-          style="z-index: 1"
-          height="125"
-          src="./images/logo/logo.png"
-        ></v-img>
         <v-list style="z-index: 1">
           <v-list-item>
             <v-btn variant="text" href="#profile" size="large"> Profile </v-btn>

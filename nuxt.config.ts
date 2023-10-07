@@ -1,4 +1,4 @@
-import { defineNuxtConfig } from "nuxt/config";
+import { ViteConfig } from "@nuxt/schema";
 import vuetify from "vite-plugin-vuetify";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
@@ -19,13 +19,10 @@ export default defineNuxtConfig({
     ssr: {
       noExternal: ["vuetify"],
     },
-    define: {
-      "process.env.DEBUG": false,
-    },
   },
   hooks: {
-    "vite:extendConfig": (config) => {
-      config.plugins!.push(vuetify());
+    "vite:extendConfig"(config: ViteConfig) {
+      config.plugins?.push(vuetify());
     },
   },
 });
