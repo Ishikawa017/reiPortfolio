@@ -3,25 +3,7 @@ import vuetify from "vite-plugin-vuetify";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
-    head: {
-      charset: "utf-8",
-      viewport: "width=device-width, initial-scale=1",
-      title: "Ishikawa's Portfolio",
-      htmlAttrs: {
-        lang: "ja",
-      },
-      meta: [
-        {
-          property: "og:url",
-          content: "https://ishikawa017.github.io/reiPortfolio/",
-        },
-        { property: "og:title", content: "Ishikawa's Portfolio" },
-        {
-          property: "og:site:name",
-          content: "Ishikawa's Portfolio",
-        },
-      ],
-    },
+    baseURL: "/reiPortfolio/",
   },
   typescript: {
     shim: false,
