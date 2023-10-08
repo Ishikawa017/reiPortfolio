@@ -86,9 +86,7 @@
   <v-sheet
     id="skills"
     color="whit"
-    style="
-      background: linear-gradient(rgb(255, 204, 188), rgb(255, 255, 255, 1));
-    "
+    style="background: linear-gradient(rgb(255, 204, 188), rgb(252, 255, 209))"
     class="py-16"
   >
     <v-container>
@@ -113,24 +111,51 @@
                 :elevation="isHovering ? 12 : 2"
                 v-bind="props"
               >
-                <v-card-title>Software Engineering</v-card-title>
+                <v-card-title class="font-weight-black"
+                  >Software Engineering</v-card-title
+                >
                 <v-card-text>
-                  <v-row no-gutters>
-                    <v-col cols="12">
-                      <v-icon color="#555" size="64" class="spin-animation">
-                        {{ mdiCog }}
-                      </v-icon>
-                    </v-col>
-                  </v-row>
-                  <v-row>
-                    <v-col>
-                      <p>JavaScript,TypeScript,PHP,Java,GO</p>
-                      <p>Vue.js,React,CakePHP</p>
-                      <p>Nuxt.js,NestJs</p>
-                      <p>Jest</p>
-                      <p>SQL Server,MongoDB,MySQL</p>
-                    </v-col>
-                  </v-row>
+                  <v-col cols="12">
+                    <v-icon color="#555" size="64" class="spin-animation">
+                      {{ mdiCog }}
+                    </v-icon>
+                  </v-col>
+                  <v-col>
+                    <p>今はTypeScript＆Nuxt.jsのスクラム開発の現場にいます。</p>
+                  </v-col>
+                  <v-col>
+                    <p>
+                      フロントエンド、バックエンド問わずチャレンジしてきました！
+                    </p>
+                    <p>
+                      メインではないですが、コンテナ構築やリリース作業などのインフラ業務も行ったことがあり、
+                      自分の知らないことでもとりあえずやってみよう！と思えることが長所かなと思います。
+                    </p>
+                  </v-col>
+                  <v-col>
+                    <p>Coding languages</p>
+                    <v-chip class="ma-2" color="orange"> JavaScript </v-chip>
+                    <v-chip class="ma-2" color="orange"> TypeScript </v-chip>
+                    <v-chip class="ma-2" color="orange"> Jest </v-chip>
+                    <v-chip class="ma-2" color="orange"> PHP </v-chip>
+                    <v-chip class="ma-2" color="orange"> Java </v-chip>
+                    <v-chip class="ma-2" color="orange"> GO </v-chip>
+                  </v-col>
+                  <v-col>
+                    <p>Framework</p>
+                    <v-chip class="ma-2" color="green"> Vue.js </v-chip>
+                    <v-chip class="ma-2" color="green"> Nuxt.js </v-chip>
+                    <v-chip class="ma-2" color="green"> React </v-chip>
+                    <v-chip class="ma-2" color="green"> NestJS </v-chip>
+                    <v-chip class="ma-2" color="green"> CakePHP </v-chip>
+                    <v-chip class="ma-2" color="green"> Iris </v-chip>
+                  </v-col>
+                  <v-col>
+                    <p>DB</p>
+                    <v-chip class="ma-2" color="blue"> SQL Server </v-chip>
+                    <v-chip class="ma-2" color="blue"> MongoDB </v-chip>
+                    <v-chip class="ma-2" color="blue"> MySQL </v-chip>
+                  </v-col>
                 </v-card-text>
               </v-card>
             </v-lazy>
@@ -150,7 +175,7 @@
                 :elevation="isHovering ? 12 : 2"
                 v-bind="props"
               >
-                <v-card-title>Illust</v-card-title>
+                <v-card-title class="font-weight-black">Illust</v-card-title>
                 <v-card-text>
                   <v-row no-gutters>
                     <v-col cols="12">
@@ -172,7 +197,7 @@
                         コミックマーケット（C94,C95,C96）など同人イベントにも参加していました。
                       </p>
                       <p>
-                        Live2Dモデル作成、配信用のスタンプ・イラスト作成、SNS用のアイコン作成等も行っています。
+                        Live2Dモデル作成、配信用のスタンプ・イラスト作成、SNS用のアイコン作成等の商業活動も行っています。
                       </p>
                     </v-col>
                   </v-row>
@@ -182,25 +207,38 @@
                         <!-- nizimaボタン -->
                         <v-btn
                           elevation="5"
-                          raised
-                          outlined
-                          target="_blank"
                           href="https://nizima.com/Profile/266790"
+                          target="_blank"
+                          outlined
+                          color="pink"
                         >
                           nizima
                         </v-btn>
                         <!-- Pixivボタン -->
                         <v-btn
                           elevation="5"
-                          raised
-                          outlined
-                          target="_blank"
                           href="https://www.pixiv.net/users/2224409"
+                          target="_blank"
+                          outlined
+                          color="pink"
                         >
                           Pixiv
                         </v-btn>
                       </v-row>
                     </v-card-actions>
+                  </v-col>
+
+                  <v-col>
+                    <v-col>
+                      <v-card-actions>
+                        <v-img
+                          min-height="100px"
+                          max-height="200px"
+                          src="./images/sample/vmodel.gif"
+                        >
+                        </v-img>
+                      </v-card-actions>
+                    </v-col>
                   </v-col>
                 </v-card-text>
               </v-card>

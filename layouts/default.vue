@@ -1,13 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar
-      color="brown-lighten-1"
-      density="default"
-      class="bg-transparent"
-      dense
-      elevation="10"
-      dark
-    >
+    <v-app-bar class="bg-transparent" flat>
       <v-btn @click.stop="navActive = !navActive" size="large">
         <div class="hamburger-menu" v-bind:class="{ active: navActive }">
           <span></span>
@@ -16,9 +9,9 @@
         </div>
       </v-btn>
       <div v-if="$vuetify.display.mdAndUp">
-        <v-btn href="#profile" size="large"> Profile </v-btn>
-        <v-btn href="#skills" size="large"> Skills </v-btn>
-        <v-btn href="#gallery" size="large"> Gallery </v-btn>
+        <v-btn color="white" href="#profile" size="large"> Profile </v-btn>
+        <v-btn color="white" href="#skills" size="large"> Skills </v-btn>
+        <v-btn color="white" href="#gallery" size="large"> Gallery </v-btn>
       </div>
     </v-app-bar>
 
@@ -27,7 +20,6 @@
       v-model="navActive"
       location="left"
       :width="300"
-      color="deep-orange-lighten-5"
       elevation="0"
       disable-resize-watcher
     >
@@ -72,7 +64,7 @@ const navActive = ref(false);
   position: absolute;
   top: -4px;
   left: -15px;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
   transition-property: opacity, transform;
   transition-duration: 0.5s;
   height: 3px;
