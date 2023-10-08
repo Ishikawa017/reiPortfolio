@@ -1,18 +1,29 @@
 <template>
-  <v-sheet color="grey-darken-4" class="py-16">
-    <v-pagination v-model="currentPage" :length="totalPages"></v-pagination>
-    <v-row>
-      <v-col
-        v-for="(imageUrl, i) in currentImageUrls"
-        :key="i"
-        class="d-flex child-flex"
-        cols="4"
+  <v-sheet id="preview" color="#333" class="py-16">
+    <v-container>
+      <v-lazy
+        min-height="60px"
+        :options="{ threshold: 1.0 }"
+        transition="slide-y-reverse-transition"
       >
-        <v-container>
-          <v-img width="1000" height="600" :src="imageUrl.src"></v-img>
-        </v-container>
-      </v-col>
-    </v-row>
+        <h2 class="text-center text-white text-h2 mb-16">Gallery</h2>
+      </v-lazy>
+      <v-pagination v-model="currentPage" :length="totalPages"></v-pagination>
+      <v-row>
+        <v-col
+          cols="4"
+          sm="12"
+          md="4"
+          v-for="(imageUrl, i) in currentImageUrls"
+          :key="i"
+          class="d-flex child-flex"
+        >
+          <v-container>
+            <v-img :src="imageUrl.src"></v-img>
+          </v-container>
+        </v-col>
+      </v-row>
+    </v-container>
   </v-sheet>
 </template>
 
