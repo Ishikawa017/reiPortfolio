@@ -8,10 +8,26 @@
           <span></span>
         </div>
       </v-btn>
+      <v-btn>
+        <router-link to="/">
+          <v-icon color="white" size="25">
+            {{ mdiHomeOutline }}
+          </v-icon>
+        </router-link>
+      </v-btn>
       <div v-if="$vuetify.display.mdAndUp">
-        <v-btn color="white" href="#profile" size="large"> Profile </v-btn>
-        <v-btn color="white" href="#skills" size="large"> Skills </v-btn>
-        <v-btn color="white" href="#gallery" size="large"> Gallery </v-btn>
+        <router-link to="/#profile">
+          <v-btn color="white" size="large"> Profile </v-btn>
+        </router-link>
+        <router-link to="/#skills">
+          <v-btn color="white" size="large"> Skills </v-btn>
+        </router-link>
+        <router-link to="/gallery">
+          <v-btn color="white" size="large"> Gallery </v-btn>
+        </router-link>
+        <router-link to="/work">
+          <v-btn color="white" size="large"> Work </v-btn>
+        </router-link>
       </div>
     </v-app-bar>
 
@@ -25,16 +41,45 @@
     >
       <v-container class="position-relative">
         <v-list style="z-index: 1">
+          <v-list-subheader>TOP</v-list-subheader>
           <v-list-item>
-            <v-btn variant="text" href="#profile" size="large"> Profile </v-btn>
+            <router-link to="/#profile">
+              <v-btn color="black" variant="text" size="large"> Profile </v-btn>
+            </router-link>
           </v-list-item>
           <v-list-item>
-            <v-btn variant="text" href="#skills" size="large"> Skills </v-btn>
+            <router-link to="/#skills">
+              <v-btn color="black" variant="text" size="large"> Skills </v-btn>
+            </router-link>
           </v-list-item>
           <v-list-item>
-            <v-btn variant="text" href="#gallery" size="large"> Gallery </v-btn>
+            <router-link to="/#preview">
+              <v-btn color="black" variant="text" size="large"> Preview </v-btn>
+            </router-link>
           </v-list-item>
         </v-list>
+        <v-list style="z-index: 1">
+          <v-list-subheader>Activity</v-list-subheader>
+          <v-list-item>
+            <router-link to="/gallery">
+              <v-btn color="black" variant="text" size="large"> Gallery </v-btn>
+            </router-link>
+          </v-list-item>
+          <v-list-item>
+            <router-link to="/work">
+              <v-btn color="black" variant="text" size="large"> Work </v-btn>
+            </router-link>
+          </v-list-item>
+        </v-list>
+        <v-col>
+          <v-row justify="center">
+            <router-link to="/">
+              <v-icon color="black" size="30">
+                {{ mdiHomeOutline }}
+              </v-icon>
+            </router-link>
+          </v-row>
+        </v-col>
       </v-container>
     </v-navigation-drawer>
 
@@ -52,6 +97,7 @@
 </template>
 
 <script setup lang="ts">
+import { mdiHomeOutline } from "@mdi/js";
 const navActive = ref(false);
 </script>
 
