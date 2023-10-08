@@ -1,6 +1,13 @@
 <template>
   <v-app>
-    <v-app-bar density="default" class="bg-transparent" flat>
+    <v-app-bar
+      color="brown-lighten-1"
+      density="default"
+      class="bg-transparent"
+      dense
+      elevation="10"
+      dark
+    >
       <v-btn @click.stop="navActive = !navActive" size="large">
         <div class="hamburger-menu" v-bind:class="{ active: navActive }">
           <span></span>
@@ -19,9 +26,8 @@
       temporary
       v-model="navActive"
       location="left"
-      :width="$vuetify.display.width"
-      class=""
-      color="blue-lighten-5"
+      :width="300"
+      color="deep-orange-lighten-5"
       elevation="0"
       disable-resize-watcher
     >
@@ -37,13 +43,6 @@
             <v-btn variant="text" href="#gallery" size="large"> Gallery </v-btn>
           </v-list-item>
         </v-list>
-        <v-img
-          class="position-fixed"
-          style="bottom: 0; left: 0; max-height: 800px; z-index: 0"
-          :width="$vuetify.display.width"
-          src="./images/profile/profile.png"
-        >
-        </v-img>
       </v-container>
     </v-navigation-drawer>
 
@@ -62,7 +61,6 @@
 
 <script setup lang="ts">
 const navActive = ref(false);
-const drawer = ref(false);
 </script>
 
 <style scoped lang="scss">

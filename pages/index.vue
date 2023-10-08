@@ -1,8 +1,5 @@
 <template>
-  <!--  ファーストビュー-->
-  <!--  - 画像表示、動画表示-->
-  <!--  今回はカルーセル-->
-
+  <!--top画像start-->
   <v-carousel
     cycle
     height="100vh"
@@ -23,12 +20,10 @@
       </v-parallax>
     </v-carousel-item>
   </v-carousel>
-  <v-sheet
-    id="profile"
-    color="deep-orange-lighten-4"
-    class="py-16"
-    gradient="to top, rgba(0,0,0,0.2), rgba(0,0,0,0.75)"
-  >
+  <!--top画像end-->
+
+  <!--profile start-->
+  <v-sheet id="profile" color="deep-orange-lighten-4" class="py-16">
     <v-container>
       <v-lazy
         min-height="60px"
@@ -85,6 +80,9 @@
       </v-row>
     </v-container>
   </v-sheet>
+  <!--profile end-->
+
+  <!--skills start-->
   <v-sheet
     id="skills"
     color="whit"
@@ -212,7 +210,9 @@
       </v-row>
     </v-container>
   </v-sheet>
+  <!--skills end-->
 
+  <!--gallery start-->
   <v-sheet id="gallery" color="#333" class="py-16">
     <v-container>
       <v-lazy
@@ -226,7 +226,7 @@
         <v-col cols="12" sm="4" md="3">
           <v-slide-group
             v-bind:style="{
-              height: $vuetify.display.smAndUp ? '600px' : '200px',
+              height: $vuetify.display.smAndUp ? '750px' : '200px',
             }"
             v-model="model"
             class="pa-4"
@@ -261,17 +261,15 @@
           </v-slide-group>
         </v-col>
         <v-col cols="12" sm="8" md="9">
-          <v-carousel v-model="model" cycle hide-delimiters>
-            <v-carousel-item
-              v-for="(item, idx) in galleryItems"
-              :src="item.src"
-            >
+          <v-carousel v-model="model" cycle hide-delimiters height="80vh">
+            <v-carousel-item v-for="item in galleryItems" :src="item.src">
             </v-carousel-item>
           </v-carousel>
         </v-col>
       </v-row>
     </v-container>
   </v-sheet>
+  <!--gallery end-->
 </template>
 
 <script setup lang="ts">
