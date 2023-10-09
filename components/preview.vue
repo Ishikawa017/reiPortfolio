@@ -1,16 +1,18 @@
 <template>
-  <v-sheet id="preview" color="#333" class="py-16">
+  <v-sheet id="preview" color="grey-lighten-1" class="py-16">
     <v-container>
       <v-lazy
         min-height="60px"
         :options="{ threshold: 1.0 }"
         transition="slide-y-reverse-transition"
       >
-        <h2 class="text-center text-white text-h2 mb-16">Gallery</h2>
+        <h2 class="text-center text-h2 mb-16">Gallery</h2>
       </v-lazy>
       <router-link to="/gallery">
         <v-row justify="end">
-          <v-btn color="black" size="large"> Galleryページへ </v-btn>
+          <v-col cols="auto">
+            <v-btn color="grey-darken-4" size="x-large">Galleryページへ </v-btn>
+          </v-col>
         </v-row>
       </router-link>
 
@@ -36,7 +38,6 @@
                 class="ma-4 align-self-center"
                 :height="isSelected ? 125 : 100"
                 :width="isSelected ? 125 : 100"
-                color="white"
                 v-bind:style="{
                   filter: isSelected ? 'grayscale(0%)' : 'grayscale(80%)',
                 }"
@@ -53,14 +54,12 @@
           </v-slide-group>
         </v-col>
         <v-col cols="12" sm="8" md="9">
-          <v-carousel
-            v-model="model"
-            cycle
-            hide-delimiters
-            height="80vh"
-            color="black"
-          >
-            <v-carousel-item v-for="item in previewitem" :src="item.src">
+          <v-carousel v-model="model" cycle hide-delimiters height="80vh">
+            <v-carousel-item
+              color="black"
+              v-for="item in previewitem"
+              :src="item.src"
+            >
             </v-carousel-item>
           </v-carousel>
         </v-col>

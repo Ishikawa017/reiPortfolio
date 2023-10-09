@@ -1,12 +1,24 @@
 <template>
   <v-sheet color="grey-darken-4" class="py-16">
     <v-container>
-      <v-row>
-        <v-btn color="black" @click="showComponentA">Live2Dモデル</v-btn>
-
-        <v-btn color="black" @click="showComponentB">コミックマーケット</v-btn>
+      <v-row justify="center" align="center">
+        <v-col cols="auto">
+          <v-btn
+            density="comfortable"
+            color="grey-lighten-5"
+            @click="showComponentA"
+            >Live2Dモデル</v-btn
+          >
+        </v-col>
+        <v-col cols="auto">
+          <v-btn
+            density="comfortable"
+            color="grey-lighten-5"
+            @click="showComponentB"
+            >コミックマーケット</v-btn
+          >
+        </v-col>
       </v-row>
-
       <live2d v-if="displayLive2d" />
       <comike v-if="displayComike" />
     </v-container>
